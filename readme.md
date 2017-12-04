@@ -1,5 +1,5 @@
-Command line tone generator that takes a list of floating point frequencies and
-emits a WAV. Pipe through ```aplay```.
+Command line tone generator that takes a list of frequencies (integer or
+floating point) and emits a WAV. Pipe through ```aplay``` to make noise.
 
 ```bash
 $ make noise

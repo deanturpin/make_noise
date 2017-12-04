@@ -10,10 +10,10 @@ int main(int argc, char *argv[]) {
   // Populate the WAV header
   wav_header wav;
 
-  wav.riff_id = 1179011410;
-  wav.riff_size = 2147483684;
-  wav.wave_tag = 1163280727;
-  wav.format_id = 544501094;
+  wav.riff_id = 0x4646'4952;
+  wav.riff_size = 0x8000'0024;
+  wav.wave_tag = 0x4556'4157;
+  wav.format_id = 0x2074'6D66;
   wav.format_size = 16;
   wav.format_tag = 1;
   wav.channels = 1;
@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
   wav.bit_depth = 16;
   wav.bytes_per_second = wav.sample_rate * wav.bit_depth / 8;
   wav.block_align = 1;
-  wav.data_id = 1635017060;
-  wav.data_size = 2147483648;
+  wav.data_id = 0x6174'6164;
+  wav.data_size = 0x8000'0000;
 
   // Parse command line
   vector<double> frequencies;

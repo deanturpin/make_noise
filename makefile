@@ -11,4 +11,4 @@ clean:
 	rm -f tony
 
 noise: tony
-	./tony 400 500 600 | aplay
+	./tony 400 500.0 600 | aplay
