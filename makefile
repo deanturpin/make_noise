@@ -10,5 +10,5 @@ tony: tony.o
 clean:
 	rm -f tony
 
-run: tony
+noise: tony
 	./tony 400 500 600 | aplay
