@@ -1,4 +1,4 @@
-CXX=g++-7
+CXX=g++
 FLAGS=-std=c++14 -g -Wall -pedantic -pedantic-errors --coverage -lgcov
 
 tony.o: tony.cpp
