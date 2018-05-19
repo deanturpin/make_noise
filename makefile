@@ -1,10 +1,8 @@
+CXX=g++-7
 FLAGS=-std=c++14 -g -Wall -pedantic -pedantic-errors --coverage -lgcov
-CXX=g++-6
 
-%.o: %.cpp
+tony.o: tony.cpp
 	$(CXX) $(FLAGS) -o $@ $<
-
-all: tony.o
 
 clean:
 	rm -f tony.o
