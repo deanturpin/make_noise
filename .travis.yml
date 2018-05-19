@@ -8,6 +8,7 @@ script:
   - which cppcheck && cppcheck -j 2 --enable=all . || true
   - ./tony.o 400 500 600 > example2.wav
   - diff example.wav example2.wav
+  - bash <(curl -s https://codecov.io/bash)
 
 matrix:
   include:
