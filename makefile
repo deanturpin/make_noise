@@ -7,5 +7,5 @@ tony.o: tony.cpp
 clean:
 	rm -f tony.o
 
-noise: tony
-	./tony 400 500.0 600 | aplay
+noise: tony.o
+	./$< 400 500.0 600 | aplay
