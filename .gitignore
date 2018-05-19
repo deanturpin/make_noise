@@ -1,2 +1,5 @@
 *.o
-tony
+*.swp
+*.gcda
+*.gcno
+*.gcov
