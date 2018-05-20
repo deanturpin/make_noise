@@ -1,6 +1,8 @@
 [![Build
 Status](https://travis-ci.org/deanturpin/make_noise.svg?branch=master)](https://travis-ci.org/deanturpin/make_noise)
 
+[![codecov](https://codecov.io/gh/deanturpin/make_noise/branch/master/graph/badge.svg)](https://codecov.io/gh/deanturpin/make_noise)
+
 Command line tone generator that takes a list of frequencies (integer or
 floating point) and emits a WAV. Pipe through ```aplay``` to make noise.
 
