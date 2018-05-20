@@ -7,6 +7,7 @@ script:
   - make $MATRIX_EVAL
   - which cppcheck && cppcheck --enable=all . || true
   - ./tony.o 400 500 600 > example2.wav
+  - ./tony.o > /dev/null
   - bash <(curl -s https://codecov.io/bash)
   - diff example.wav example2.wav
 
