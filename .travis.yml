@@ -4,7 +4,7 @@ git:
   depth: false
 
 script:
-  - make
+  - make $MATRIX_EVAL
   - which cppcheck && cppcheck --enable=all . || true
   - ./tony.o 400 500 600 > example2.wav
   - diff example.wav example2.wav
