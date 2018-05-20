@@ -1,6 +1,9 @@
+#
 FLAGS=-std=c++14 -g -Wall -pedantic -pedantic-errors --coverage -lgcov
 
+#
 CXX=g++-6
+
 tony.o: tony.cpp
 	$(CXX) $(FLAGS) -o $@ $<
 
