@@ -9,3 +9,6 @@ clean:
 
 noise: tony.o
 	./$< 400 500.0 600 | aplay
+
+install: tony.o
+	cp $< /usr/bin/tony
