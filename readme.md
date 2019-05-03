@@ -13,3 +13,8 @@ tony.cpp
 ./tony.o 400 500.0 600 | aplay
 Lecture WAVE 'stdin' : Signed 16 bit Little Endian, Fréquence 2000 Hz, Mono
 ```
+
+# Examples
+```bash
+tcpdump -v | while read line; do [[ $line =~ length\ ([0-9]+) ]] && echo ${BASH_REMATCH[1]}; done
+```
