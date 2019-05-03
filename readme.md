@@ -15,6 +15,7 @@ Lecture WAVE 'stdin' : Signed 16 bit Little Endian, Fréquence 2000 Hz, Mono
 ```
 
 # Examples
+Harmonise network packet size.
 ```bash
-tcpdump -v | while read line; do [[ $line =~ length\ ([0-9]+) ]] && echo ${BASH_REMATCH[1]}; done
+tcpdump -v | while read line; do [[ $line =~ length\ ([0-9]+) ]] && tony ${BASH_REMATCH[1]} | aplay; don
 ```
