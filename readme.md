@@ -19,3 +19,8 @@ Harmonise network packet size.
 ```bash
 tcpdump -v | while read line; do [[ $line =~ length\ ([0-9]+) ]] && tony ${BASH_REMATCH[1]} | aplay; don
 ```
+
+Not so tuneful version.
+```bash
+tcpdump -v | while read line; do [[ $line =~ length\ ([0-9]+) ]] && (tony $(( 2 * ${BASH_REMATCH[1]} )) | aplay &); done
+```
