@@ -5,8 +5,6 @@
 
 int main(int argc, char *argv[]) {
 
-  using namespace std;
-
   // Populate the WAV header
   wav_header wav;
 
@@ -25,7 +23,7 @@ int main(int argc, char *argv[]) {
   wav.data_size        = 0x8000'0000;
 
   // Parse command line
-  vector<double> frequencies;
+  std::vector<double> frequencies;
   for (int i = 1; i < argc; ++i)
     frequencies.push_back(atof(argv[i]));
 
@@ -34,10 +32,10 @@ int main(int argc, char *argv[]) {
     frequencies.push_back(440.0);
 
   // Write the WAV header
-  cout.write(reinterpret_cast<char *>(&wav), sizeof(wav));
+  std::cout.write(reinterpret_cast<char *>(&wav), sizeof(wav));
 
   // Create a second's worth of samples
-  for (unsigned long i = 0; i < wav.sample_rate / 4; ++i) {
+  for (unsigned long i = 0; i < wav.sample_rate / 10; ++i) {
 
     // Add all the frequencies into the mix
     unsigned short sample = 0;
@@ -59,7 +57,7 @@ int main(int argc, char *argv[]) {
     // 2's comp
     sample = ~sample + 1;
 
-    cout.write(reinterpret_cast<char *>(&sample), sizeof(sample));
+    std::cout.write(reinterpret_cast<char *>(&sample), sizeof(sample));
   }
 
   return 0;
