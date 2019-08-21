@@ -1,5 +1,5 @@
-FLAGS=-std=c++2a -Wall -pedantic -pedantic-errors -O1
-CXX=g++-9
+FLAGS ?= -std=c++2a -Wall -pedantic -pedantic-errors -O1
+CXX ?= g++-9
 
 tony.o: tony.cpp
 	$(CXX) $(FLAGS) -o $@ $<
